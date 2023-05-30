@@ -18,4 +18,4 @@
       register: vpc_out
 
     - debug:
-        var: vpc_out
+        var: vpc_out.vpc.id
