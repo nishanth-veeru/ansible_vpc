@@ -1,0 +1,25 @@
+# vpc details
+vpc_name: kgf-vpc
+# region
+region: "ap-south-1"
+# cidr block
+vpcCidr: 172.21.0.0/16
+
+
+#subnets
+
+pubsub1Cidr: 172.21.1.0/24
+pubsub2Cidr: 172.21.2.0/24
+pubsub3Cidr: 172.21.3.0/24
+prisub1Cidr: 172.21.4.0/24
+prisub2Cidr: 172.21.5.0/24
+prisub3Cidr: 172.21.6.0/24
+
+# zones
+
+zone1: ap-south-1a
+zone2: ap-south-1b
+zone3: ap-south-1c
+
+
+state: present
