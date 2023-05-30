@@ -127,6 +127,22 @@
         wait_timeout: 300
       register: nat_out
 
+    - name: creat privateRT
+      ec2_vpc_route_table:
+        vpc_id: "{{vpc_out.vpc.id}}"
+        region: "{{region}}"
+        tags:
+          Name: privateRT
+        state: "{{state}}"
+        subnets:
+          - "{{prisub1_out.subnet.id}}"
+          - "{{prisub2_out.subnet.id}}"
+          - "{{prisub3_out.subnet.id}}"
+        routes:
+          - dest: 0.0.0.0/0
+            gateway_id: "{{nat_out.nat_gateway_id}}"
+      register: priRT_out
+
 
 
 
