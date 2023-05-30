@@ -22,7 +22,7 @@
         vpc_id: "vpc_out.vpc.id"
         region: "{{region}}"
         az: "{{zone1}}"
-        cidr: "{{pusub1Cidr}}"
+        cidr: "{{pubsub1Cidr}}"
         map_public: yes
         state: "{{state}}"
         wait: yes
