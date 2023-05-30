@@ -97,6 +97,8 @@
         vpc_id: "{{vpc_out.vpc.id}}"
         region: "{{region}}"
         state: "{{state}}"
+        tags:
+          Name: kgf_IGW
       register: igw_out
 
 
