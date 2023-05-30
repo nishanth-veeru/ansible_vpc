@@ -92,6 +92,13 @@
           Name: prisub3
       register: prisub3_out
 
+    - name: create internet gateway
+      ec2_vpc_igw:
+        vpc_id: "{{vpc_out.vpc.id}}"
+        region: "{{region}}"
+        state: "{{state}}"
+      register: igw_out
+
 
 
 
