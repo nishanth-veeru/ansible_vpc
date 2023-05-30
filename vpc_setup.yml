@@ -117,6 +117,17 @@
             gateway_id: "{{igw_out.gateway_id}}"
       register: pubRT_out
 
+    - name: create NAT_GW
+      ec2_vpc_nat_gateway:
+        state: "{{state}}"
+        region: "{{region}}"
+        subnet_id: "{{pubsub1_out.subnet.id}}"
+        if_exist_do_not_create: yes
+        wait: yes
+        wait_timeout: 300
+      register: nat_out
+
+
 
 
 
