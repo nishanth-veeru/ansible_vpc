@@ -15,3 +15,7 @@
         dns_support: yes
         state: "{{state}}"
         tenancy: default
+      register: vpc_out
+
+    - debug:
+        var: vpc_out
